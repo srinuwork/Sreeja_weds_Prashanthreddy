@@ -1543,3 +1543,32 @@ nav#filter li {
         flex: 0 0 100%;
     }
 }
+/* Add/modify these styles */
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 9999; /* Increase z-index to ensure menu is always on top */
+}
+
+.navbar-collapse {
+    background: #DC4343; /* Match header background */
+    max-height: calc(100vh - 70px); /* Limit height and enable scrolling if needed */
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        z-index: 9999;
+    }
+
+    .banner-container {
+        margin-top: 70px; /* Add space below fixed header */
+    }
+
+    .flex-caption {
+        z-index: 1; /* Ensure caption stays below menu */
+    }
+}
