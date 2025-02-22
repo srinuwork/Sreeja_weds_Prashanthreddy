@@ -155,21 +155,4 @@ $('document').ready(function () {
         asNavFor            : "",                //{NEW} Selector: Internal property exposed for turning the slider into a thumbnail navigation for another slider
     });
 
-    // Add this code to auto-close menu when clicking menu items
-    $(document).ready(function() {
-        // Close menu when clicking menu items
-        $('.navbar-nav li a').on('click', function(){
-            if(!$(this).parent().hasClass('dropdown')) {
-                $('.navbar-collapse').collapse('hide');
-            }
-        });
-
-        // Close menu when clicking outside
-        $(document).click(function(event) {
-            if(!$(event.target).closest('.navbar').length) {
-                $('.navbar-collapse').collapse('hide');
-            }
-        });
-    });
-
 });
